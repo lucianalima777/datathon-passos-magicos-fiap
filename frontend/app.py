@@ -8,7 +8,8 @@ from dotenv import load_dotenv
 load_dotenv()
 
 API_URL = os.getenv("API_URL", "http://localhost:8000")
-DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+if not API_URL.startswith("http"):
+    API_URL = f"https://{API_URL}"
 
 st.set_page_config(page_title="Passos Mágicos - Risco Escolar", layout="wide")
 st.title("Passos Mágicos - Previsão de Risco de Defasagem Escolar")
