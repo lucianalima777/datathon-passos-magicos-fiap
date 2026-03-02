@@ -13,7 +13,7 @@ services:
   - type: web
     name: passos-magicos-frontend
     runtime: python
-    buildCommand: pip install -r frontend/requirements.txt
+    buildCommand: pip install --prefer-binary -r frontend/requirements.txt
     startCommand: streamlit run frontend/app.py --server.port $PORT --server.address 0.0.0.0
     envVars:
       - key: API_URL
