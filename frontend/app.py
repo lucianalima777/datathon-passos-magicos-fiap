@@ -11,6 +11,8 @@ API_URL = os.getenv("API_URL", "http://localhost:8000")
 if not API_URL.startswith("http"):
     API_URL = f"https://{API_URL}"
 
+DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
+
 st.set_page_config(page_title="Passos Mágicos - Risco Escolar", layout="wide")
 st.title("Passos Mágicos - Previsão de Risco de Defasagem Escolar")
 st.markdown(
