@@ -20,6 +20,6 @@ services:
         fromService:
           name: passos-magicos-api
           type: web
-          property: hostport
+          property: url
       - key: DEEPSEEK_API_KEY
         sync: false  

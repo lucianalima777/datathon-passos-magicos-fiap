@@ -46,13 +46,14 @@ backend/data/processed/*.csv
 backend/data/processed/*.xlsx
 backend/data/processed/*.parquet
 !backend/data/processed/.gitkeep
-
 backend/data/models/*.pkl
 backend/data/models/*.joblib
 backend/data/models/*.h5
 !backend/data/models/.gitkeep
 !backend/data/models/baseline_logreg.joblib
 !backend/data/models/baseline_logreg_metrics.json
+!backend/data/processed/train_data.csv
+
 
 *.log
 logs/
