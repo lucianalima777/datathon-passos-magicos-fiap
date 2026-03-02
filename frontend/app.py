@@ -79,7 +79,7 @@ def _stream_deepseek(messages: list, api_key: str):
         model="deepseek-chat",
         messages=messages,
         stream=True,
-        max_tokens=400,
+        max_tokens=700,
         temperature=0.7,
     )
     for chunk in stream:
