@@ -1,0 +1,58 @@
+name: Testes e Qualidade de Código
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+jobs:
+  tests:
+    name: pytest
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar dependencias
+        run: pip install -r requirements.txt
+
+      - name: Executar testes com cobertura
+        run: |
+          pytest backend/tests/ -v \
+            --cov=backend/src \
+            --cov-report=term-missing \
+            --cov-fail-under=80
+
+  lint:
+    name: lint
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout do repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Instalar ferramentas de qualidade
+        run: pip install black==23.12.1 isort==5.13.2 flake8==7.0.0
+
+      - name: Verificar formatação (black)
+        run: black --check --line-length=100 backend/
+
+      - name: Verificar ordenação de imports (isort)
+        run: isort --check --profile=black backend/
+
+      - name: Verificar estilo (flake8)
+        run: flake8 backend/ --max-line-length=100 --extend-ignore=E203,W503
