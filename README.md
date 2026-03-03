@@ -318,9 +318,10 @@ O drift é calculado a partir de no mínimo 30 predições acumuladas no banco. 
 ## Entregáveis
 
 - Link Github: https://github.com/lucianalima777/datathon-passos-magicos-fiap
-- Link da API: 
-- Link do Frontend: 
-- Link do vídeo : 
+- Link da API: https://passos-magicos-api.onrender.com/
+- Link Documentação API: https://passos-magicos-api.onrender.com/docs
+- Link do Frontend: https://passos-magicos-frontend.onrender.com/
+
 
 
 ---
