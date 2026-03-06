@@ -321,7 +321,7 @@ O drift é calculado a partir de no mínimo 30 predições acumuladas no banco. 
 - Link da API: https://passos-magicos-api.onrender.com/
 - Link Documentação API: https://passos-magicos-api.onrender.com/docs
 - Link do Frontend: https://passos-magicos-frontend.onrender.com/
-
+- Link do vídeo do Youtube - Apresentação: https://youtu.be/2iSA6N8Wea0
 
 
 ---
